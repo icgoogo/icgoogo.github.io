@@ -54287,7 +54287,7 @@ A.lx.prototype={
 ar(){return new A.CM(B.n)}}
 A.CM.prototype={
 O(a,b){var s=null
-return A.a9U(A.a8j(A.a([A.i2(s,A.Bx(B.a9,A.QH(!1,!0,new A.rC(A.akv(s,s,new A.mE("images/me.webp",s,s)),s),s,!0,s,s,s,s,s,s,s,s,s,new A.TU(),s,s,s),B.y,B.D2,0,s,s,s,s,s,B.c8),s,s,B.jV,200,s,s,200),A.Wg(s,30,s),A.oQ("Ceria",s,s,s)],t.E)))}}
+return A.a9U(A.a8j(A.a([A.i2(s,A.Bx(B.a9,A.QH(!1,!0,new A.rC(A.akv(s,s,new A.mE("assets/images/me.webp",s,s)),s),s,!0,s,s,s,s,s,s,s,s,s,new A.TU(),s,s,s),B.y,B.D2,0,s,s,s,s,s,B.c8),s,s,B.jV,200,s,s,200),A.Wg(s,30,s),A.oQ("Ceria",s,s,s)],t.E)))}}
 A.TU.prototype={
 $0(){},
 $S:0}
@@ -56227,7 +56227,7 @@ B.tr=new A.kp(0,"resumed")
 B.ts=new A.kp(1,"inactive")
 B.tt=new A.kp(2,"paused")
 B.tu=new A.kp(3,"detached")
-B.bG=new A.mE("images/me.webp",null,null)
+B.bG=new A.mE("assets/images/me.webp",null,null)
 B.C=new A.ks(0,"up")
 B.V=new A.ks(1,"right")
 B.D=new A.ks(2,"down")
