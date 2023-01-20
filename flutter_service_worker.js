@@ -4,18 +4,19 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "2d0efc4a77dfccc8d836201830649d72",
-"index.html": "fe2af92f510b92f337eb928ea0c4226c",
-"/": "fe2af92f510b92f337eb928ea0c4226c",
-"main.dart.js": "155ae4a14e6cd013e6b2ff59aad8085c",
-"flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
+"index.html": "0e163a4d69f030775e04c8abd29c0341",
+"/": "0e163a4d69f030775e04c8abd29c0341",
+"main.dart.js": "d8aa94f1654f97392f7d6dbea3fa6950",
+"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
 "favicon.png": "7f410cfb3960e7cc88651eefd148ece5",
 "icons/icon-192.png": "b779aec7d44de70d9be1ceb05b76afea",
 "icons/icon-512.png": "c7ecb60245ce26f71b47d10680936e25",
 "manifest.json": "de943eac80267b78e2750d1b7ed3b4c9",
-"assets/AssetManifest.json": "3afbf340e1cbcb18ea03df5b0a78b2af",
-"assets/NOTICES": "f4ef757f3fb3620f4ca87da325274e65",
+"assets/AssetManifest.json": "e898febf2d050c618b15dc57b74226ea",
+"assets/NOTICES": "c00fbed3ae84df0e08ea4b7bb3730462",
 "assets/FontManifest.json": "af72817180f1600c6ad8d83aa72f0a98",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/shaders/ink_sparkle.frag": "4a57c1b4559cb382e1ce5a4e660b1363",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
 "assets/assets/images/me.webp": "62b6058c8f18d6ec3beec3da3d9dccf1",
 "assets/assets/images/linkedin_icon.png": "5bb3ed2baaad92f1a4293abcd4b5e1eb",
@@ -23,11 +24,15 @@ const RESOURCES = {
 "assets/assets/images/photo.jpeg": "8bb43cb7e37e427417fabd55e05c6590",
 "assets/assets/images/flutter_clicker_game.svg": "ece57cbc962798de3939a812febf4bf3",
 "assets/assets/images/github_icon.png": "ec3a60c8c6539a07eb70b52f6737ea6e",
+"assets/assets/videos/ktor-sports-api.png": "c82fe8900131820310f92225c4d85e60",
+"assets/assets/videos/ceria.gif": "63df4769ca118ed439ecd33f7d3e25e9",
+"assets/assets/videos/pokedex-nextjs.gif": "ee902943018595c46eb28fd19d8e274e",
+"assets/assets/videos/clicker_game.gif": "89dde4166ff218c5c0c5b3758228ea8a",
 "assets/assets/fonts/PressStart2P-Regular.ttf": "f98cd910425bf727bd54ce767a9b6884",
-"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
-"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
-"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
-"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba"
+"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
+"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
+"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
+"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -35,7 +40,6 @@ const RESOURCES = {
 const CORE = [
   "main.dart.js",
 "index.html",
-"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
@@ -134,9 +138,11 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache.
+        // lazily populate the cache only if the resource was successfully fetched.
         return response || fetch(event.request).then((response) => {
-          cache.put(event.request, response.clone());
+          if (response && Boolean(response.ok)) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         });
       })
