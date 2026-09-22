@@ -88244,12 +88244,12 @@ B.Ma=new A.dY("Network Data Analysis Notebook",null,"assets/md/ctf_challenges.md
 B.Mb=new A.dY("Linux Kernel Module Development",null,"assets/md/ctf_challenges.md",null)
 B.Mc=new A.dY("Kernel-Level TCP FSM with eBPF with C",null,"assets/md/ebpf_tracker.md",null)
 B.Md=new A.dY("Ceria by BRI","assets/videos/ceria.gif","assets/md/bri_ceria.md",null)
-B.Me=new A.dY("Throughput Prediction for 5G High Density Network",null,"assets/md/network_liverpool.md",null)
-B.Mf=new A.dY("Cocorolife Indonesia","assets/images/cocorolife.webp",null,"https://play.google.com/store/apps/details?id=id.cocorolife")
-B.Mg=new A.dY("Pokedex NextJS","assets/videos/pokedex-nextjs.gif",null,"https://pokedex-nextjs-icgoogo.vercel.app")
-B.Mh=new A.dY("Programmable Data Plane with P4 and eBPF",null,"assets/md/ebpf_tracker.md",null)
-B.Mi=new A.dY("Network Measurement Notebook",null,"assets/md/ctf_challenges.md",null)
-B.Mj=new A.dY("Image Classifier with Mask using Transfer Learning","assets/images/img_classification.webp","assets/md/ctf_challenges.md",null)
+B.Me=new A.dY("Cocorolife Indonesia","assets/images/cocorolife.webp",null,"https://play.google.com/store/apps/details?id=id.cocorolife")
+B.Mf=new A.dY("Pokedex NextJS","assets/videos/pokedex-nextjs.gif",null,"https://pokedex-nextjs-icgoogo.vercel.app")
+B.Mg=new A.dY("Programmable Data Plane with P4 and eBPF",null,"assets/md/ebpf_tracker.md",null)
+B.Mh=new A.dY("Network Measurement Notebook",null,"assets/md/ctf_challenges.md",null)
+B.Mi=new A.dY("Image Classifier with Mask using Transfer Learning","assets/images/img_classification.webp","assets/md/ctf_challenges.md",null)
+B.Mj=new A.dY("Throughput Prediction for 5G High Density Network",null,null,"https://github.com/icgoogo/throughput_prediction_for_5G_high_density_network")
 B.Mk=new A.dY("Pain Level Classifier with Temporal Data","assets/images/pain_classification.webp","assets/md/ctf_challenges.md",null)
 B.Ml=new A.dY("CTF Challenges",null,"assets/md/ctf_challenges.md",null)
 B.Mm=new A.dY("Clicker Game","assets/videos/clicker_game.gif",null,"https://flutter-pfft.netlify.app/")
@@ -89255,7 +89255,7 @@ $.arR=!0
 $.arQ=!1
 $.p0=A.b([],A.af("w<kg>"))
 $.aoj=A.b(["p","h1","h2","h3","h4","h5","h6","li","blockquote","pre","ol","ul","hr","table","thead","tbody","tr","section"],t.s)
-$.aOg=A.b([B.Md,B.Mc,B.Me,B.Ml,B.Mh,B.Mb,B.Ma,B.Mi,B.Mj,B.Mk,B.Mf,B.Mm,B.Mg],A.af("w<dY>"))
+$.aOg=A.b([B.Md,B.Mc,B.Mj,B.Ml,B.Mg,B.Mb,B.Ma,B.Mh,B.Mi,B.Mk,B.Me,B.Mm,B.Mf],A.af("w<dY>"))
 $.Xy=!1
 $.ayx=null
 $.ao9=null
